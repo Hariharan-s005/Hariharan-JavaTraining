@@ -32,4 +32,4 @@ public class Q_13 {
 		 System.out.println("Student "+(i+1)+" scored a total of "+sum+" marks.");
 	 }
  }
-}
+ }

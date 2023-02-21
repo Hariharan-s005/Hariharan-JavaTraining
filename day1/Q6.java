@@ -1,3 +1,4 @@
+
 /*An array size is not dynamic hence the only way to resize 
  it is to create a new array and copy the elements of 
  the old old array to the new Array
