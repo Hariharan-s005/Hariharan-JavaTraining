@@ -1,7 +1,9 @@
-package day2;
-import java.util.*;
-public class Q_3 {
-  public static void main(String[] args) {
+package day3_Employee;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+class Runner {
+	public static void main(String[] args) {
 	Scanner scan=new Scanner(System.in);	
 	ArrayList<SalesTerritoryManager>salesterritorymanager=new ArrayList<>();
 	ArrayList<SalesManager>salesmanager=new ArrayList<>();
@@ -123,69 +125,5 @@ public class Q_3 {
 	  scan.close();
 	}
   
-  
-}
 
-abstract class Employee
-{
-	abstract void name(String name);
-	abstract void DOJ(String DOJ);
-}
-
-class SalesTerritoryManager extends Employee
-{
-    String name;
-    String DOJ;
-    int salary=50000;
-	@Override
-	void name(String name) {
-		this.name=name;
-	}
-
-	@Override
-	void DOJ(String DOJ) {
-		this.DOJ=DOJ;
-	}
-	
-}
-class SalesManager  extends SalesTerritoryManager
-{   
-	int salary=35000;
-	void name(String name) {
-		this.name=name;
-	}
-	
-	void DOJ(String DOJ) {
-		this.DOJ=DOJ;
-	}
-
-
-}
-class SalesPerson extends SalesManager
-{   
-	int salary=20000;
-	void name(String name) {
-		this.name=name;
-	}
-	
-	void DOJ(String DOJ) {
-		this.DOJ=DOJ;
-	}
-
-
-}
-class Worker extends Employee
-{
-   String name;
-   String DOJ;
-   int salary=15000;
-	@Override
-	void name(String name) {
-		this.name=name;
-	}
-	@Override
-	void DOJ(String DOJ) {
-		this.DOJ=DOJ;
-	}
-	
 }
