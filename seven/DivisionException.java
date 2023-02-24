@@ -7,7 +7,7 @@ public class DivisionException {
  public static void main(String[] args) {
 	 Scanner scan=new Scanner(System.in);
 	 String numerator,denominator;
-	 int result;
+	 float result;
 	 while(true)
 	 {
 		 System.out.println("Enter the Numerator:");
@@ -21,13 +21,14 @@ public class DivisionException {
 		 System.out.println("Enter the Denominator");
 		 denominator=scan.nextLine();
         try
-        {   
-        	result=Integer.valueOf(numerator)/Integer.valueOf(denominator);
+        {   int num=Integer.valueOf(numerator);
+            int den=Integer.valueOf(denominator);
+        	result=num/den;
         	System.out.println(numerator+"/"+denominator+"="+result);
         }
         catch(NumberFormatException e)
         {
-        	System.out.println("Poor Input data not suitable for division");
+        	System.out.println("Number format wrong");
         }
         catch(ArithmeticException e)
         {
@@ -35,7 +36,7 @@ public class DivisionException {
         }
         catch(InputMismatchException e)
         {
-        	System.out.println("Number format wrong");
+        	System.out.println("Input typw wrong");
         }
 }
 }
