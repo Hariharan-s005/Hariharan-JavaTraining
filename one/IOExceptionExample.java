@@ -1,19 +1,20 @@
 package one;
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 
 public class IOExceptionExample {
-	public static void main(String[] args){
-         throw new UncheckedIOException(null);
+	public static void main(String[] args) throws Exception{
+		ExceptionExample exceptionExample=new ExceptionExample();
+        exceptionExample.method("IO Exception example.txt");  
 	}
   }
 class ExceptionExample
 {
-	 public static void method() throws Exception
+	  void method(String S) throws Exception
 	   {   
-		
-		   throw new IOException();
+		FileReader f=new FileReader(S);	  
 	   }
 
 }

@@ -7,16 +7,13 @@ public static void main(String[] args) throws Exception {
 		  throw new OwnException("Own Exception Example");
 		}
 	catch(OwnException e) {
-		    System.out.println(e);	
+		    System.out.println(e.getMessage());	
 		}
 }
 }
 class OwnException extends Exception {
 	String message;
 	OwnException(String message) {
-			this.message=message;
+		super(message);
 		}
-	public String toString() {
-		return message;
-	}
 }

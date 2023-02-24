@@ -1,22 +1,16 @@
 package five;
 
 public class ExceptionExampleMethod {
-  public static void main(String[] args) throws Exception {
-	 
-			try {
-				throw new OwnException("Own Exception example");
-				}
-			
+  public static void main(String[] args) throws OwnException {
+	throw new OwnException("Own Exception example");		
 	}
 }
 class OwnException extends Exception {
 	String message;
 	OwnException(String message) {   
-		this.message=message;
+		super(message);	
 		}
-	public String toString() {
-		return message;
-	}
+	
 }
 
 

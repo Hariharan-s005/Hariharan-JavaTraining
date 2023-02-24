@@ -26,10 +26,10 @@ public class OwnFormatExceptions {
 	}
    	catch(OutofRangeException e)
    	{
-   		System.out.println(e);
+   		System.out.println(e.getMessage());
    	}
    	catch(NegativeValueException e) {
-   		System.out.println(e);
+   		System.out.println(e.getMessage());
    	} 
    }
   System.out.println("Average of marks of 10 students is:"+sum/10);
@@ -41,22 +41,15 @@ class NegativeValueException extends Exception
 	String NegativeValueError;
 	public NegativeValueException(String NegativeValueError)
 	{
-		 this.NegativeValueError=NegativeValueError;
-	}
-	public String toString() {
-		return NegativeValueError;
-	}
+		 super(NegativeValueError);
+	}	
 }
 class OutofRangeException extends Exception
 {
 	String OutofRangeError;
 	public OutofRangeException(String OutofRangeError) {
-		this.OutofRangeError=OutofRangeError;
+		super(OutofRangeError);
    	}
-	@Override
-	public String toString()
-	{
-		return OutofRangeError;
-	}	
+	
 }
 

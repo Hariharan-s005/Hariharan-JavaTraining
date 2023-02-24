@@ -38,6 +38,6 @@ public class DivisionException {
         {
         	System.out.println("Input typw wrong");
         }
-}
-}
+    }
+  }
 }
