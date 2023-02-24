@@ -27,5 +27,5 @@ public static void main(String[] args) {
 	ResultObservation2 q=new ResultObservation2();
 	q.mth1();
 
-}
+ }
 }

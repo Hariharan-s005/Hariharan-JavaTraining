@@ -38,7 +38,7 @@ public class OwnFormatExceptions {
 }
 class NegativeValueException extends Exception
 {
-	String NegativeValueError;
+	
 	public NegativeValueException(String NegativeValueError)
 	{
 		 super(NegativeValueError);
@@ -46,7 +46,7 @@ class NegativeValueException extends Exception
 }
 class OutofRangeException extends Exception
 {
-	String OutofRangeError;
+	
 	public OutofRangeException(String OutofRangeError) {
 		super(OutofRangeError);
    	}	

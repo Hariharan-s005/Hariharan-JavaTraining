@@ -16,5 +16,4 @@ class ExceptionExample
 	   {   
 		FileReader f=new FileReader(S);	  
 	   }
-
 }

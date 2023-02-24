@@ -12,7 +12,7 @@ public static void main(String[] args) throws Exception {
  }
 }
 class OwnException extends Exception {
-	String message;
+	
 	OwnException(String message) {
 		super(message);
 	}
