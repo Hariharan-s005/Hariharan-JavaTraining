@@ -26,6 +26,5 @@ public class ResultObservation1 {
 	  public static void main(String[] args) {
 		  ResultObservation1 resultObservation=new ResultObservation1();
 		  resultObservation.mth1();
-
 	}
-	}
+}

@@ -9,8 +9,7 @@ class OwnException extends Exception {
 	String message;
 	OwnException(String message) {   
 		super(message);	
-		}
-	
+	}	
 }
 
 

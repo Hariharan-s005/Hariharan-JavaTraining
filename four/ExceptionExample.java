@@ -9,11 +9,11 @@ public static void main(String[] args) throws Exception {
 	catch(OwnException e) {
 		    System.out.println(e.getMessage());	
 		}
-}
+ }
 }
 class OwnException extends Exception {
 	String message;
 	OwnException(String message) {
 		super(message);
-		}
+	}
 }

@@ -34,7 +34,7 @@ public class OwnFormatExceptions {
    }
   System.out.println("Average of marks of 10 students is:"+sum/10);
   scan.close();
-}
+ }
 }
 class NegativeValueException extends Exception
 {
@@ -49,7 +49,6 @@ class OutofRangeException extends Exception
 	String OutofRangeError;
 	public OutofRangeException(String OutofRangeError) {
 		super(OutofRangeError);
-   	}
-	
+   	}	
 }
 

@@ -7,23 +7,19 @@ public class NumberFormatExceptionExample {
 		
    int i=0;
   while(i<10) {
-   	try 
-	{   System.out.println("Enter the marks of the student"+(i+1));
+   	try {
+	  System.out.println("Enter the marks of the student"+(i+1));
         int a=Integer.parseInt(scan.nextLine());
     	sum+=a;
          i++;
-	 }
-	catch(NumberFormatException e)
-	{
-	    
+    }
+	catch(NumberFormatException e){	    
 		System.out.println("Enter an Integer");				
 	} 
-      
-
    }
   System.out.println("Average of marks of 10 students is:"+sum/10);
   scan.close();
-}
+ }
 }
 
 
