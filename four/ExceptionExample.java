@@ -1,0 +1,22 @@
+package four;
+
+
+public class ExceptionExample {
+public static void main(String[] args) throws Exception {
+	try { 
+		  throw new OwnException("Own Exception Example");
+		}
+	catch(OwnException e) {
+		    System.out.println(e);	
+		}
+}
+}
+class OwnException extends Exception {
+	String message;
+	OwnException(String message) {
+			this.message=message;
+		}
+	public String toString() {
+		return message;
+	}
+}
