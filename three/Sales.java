@@ -1,48 +1,44 @@
 package three;
 public class Sales 
 {
-	
-	boolean flag=true;
 	int itemCount=0;
   synchronized public  void produce()
     {
-    	if(!flag)
+    	if(itemCount==1)
     	{
     		try
     		{
-    			wait();
+    			wait();  //causes current thread to wait until another thread invokes notify
     		}
     		catch(Exception e)
     		{
-    			
+    			System.out.println(e);
     		}	
     	}  
     	   
     		System.out.println("Producer produced");
     		itemCount++;
     		System.out.println("Items in inventory:"+itemCount);
-    		flag=false;
-    		notify();
-    	
+    		
+    		notify();  //wakes up a single thread which is waiting   	
     }
   synchronized public  void consume()
     {
-    	if(flag)
+    	if(itemCount==0)
     	{
     		try
     		{
-    			wait();
+    			wait();    //causes current thread to wait until another thread invokes notify
     		}
     		catch(Exception e)
     		{
-    			
+    			System.out.println(e);
     		}
     	}
     		System.out.println("Consumer consumed");
     		itemCount--;
     		System.out.println("Items in inventory:"+itemCount);
-    		flag=true;
-    		notify();
+    		notify();  //wakes up a single thread which is waiting
     }
  }
 

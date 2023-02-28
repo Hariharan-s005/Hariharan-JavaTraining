@@ -15,19 +15,19 @@ public class TimeCalculator {
 		for(int i=second;i<60;i++)
 		{	
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(1000);    //pauses 1 second or 1000 milliseconds
 			second++;
 		}
 		catch(Exception e) {
 			System.out.println(e.getMessage());	
 		 }
-		printClock();
+		printClock();   //prints the time
 	    }
-		notifyAll();
+		notifyAll();   //wakes up threads which are waiting.
 		}
 		else {
 			try{
-		     wait();
+		     wait();      //causes current thread to wait until another thread invokes notify  		
 		  }
 			catch(Exception e){
 			  System.out.println(e.getMessage());	 
@@ -38,16 +38,16 @@ public class TimeCalculator {
 		if(second==60&&minute<59) {
 		    second=0;
 			minute++;
-			notifyAll();
+			notifyAll();   //wakes up threads which are waiting.
 		}
 		else {
 		   try {
-		 	 wait();		
-		} 
+		 	 wait();		    //causes current thread to wait until another thread invokes notify   		
+		}  
 		    catch(Exception e) {
 			 System.out.println(e.getMessage());	
 		}
-		printClock();
+		printClock();  //prints the time
 	   }		
 	 }
 		
@@ -63,15 +63,14 @@ public class TimeCalculator {
 		{
 			hour++;
 		}
-			notifyAll();
+			notifyAll();    //wakes up threads which are waiting.
 		}
 
-		else {
-		
+		else {	
 		try {
-			wait();
+			wait();    //causes current thread to wait until another thread invokes notify
 		} catch (InterruptedException e) {
-			
+			System.out.println(e.getMessage());
 		}
 		
 	}
