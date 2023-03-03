@@ -1,16 +1,29 @@
 package factorypattern;
 
 public class CountryFactory {
+
+	//method that creates objects for the subclasses
 public static Country getInstance(String countryName) {
-	if(countryName.equals("India"))
-	    return new India();
-   else if(countryName.equals("Japan"))
-	    return new Japan();
-   else if(countryName.equals("USA"))
-	    return new USA();
-   else if(countryName.equals("China"))
-	    return new China();
 	
+	switch(countryName)
+	{
+	 case "India":
+		 return new India();
+       
+	 case "Japan":
+		 return new India();
+    
+	 case "USA":
+		 return new India();
+       
+	 case "China":
+		 return new India();
+      
+       default:
+    	   System.out.println("No details available");
+    	   System.exit(0);
+	}
 	return null;
+	
 }
 }

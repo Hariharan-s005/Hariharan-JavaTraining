@@ -7,16 +7,15 @@ package factorypattern;
 import java.util.Scanner;
 
 public class CountryStats { 
+	
 	public static void main(String[] args) {
 	 Scanner scan=new Scanner(System.in);
 	 String countryName=scan.nextLine();
-	 Country country=CountryFactory.getInstance(countryName);
-	 if(country==null) {
-		 System.out.println("No data for this Country");
-		 System.exit(0);
-	 }	
-	   country.capital();
-	   country.currency();
+	 
+	 Country country=CountryFactory.getInstance(countryName);  //creates object for the Country name user has entered
+ 
+	   country.capital();  //calls capital method
+	   country.currency(); //calls currency method
 	   scan.close();
 }
 }

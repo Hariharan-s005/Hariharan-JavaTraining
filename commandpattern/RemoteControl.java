@@ -9,21 +9,21 @@ public class RemoteControl
 {
     public static void main(String[] args)
     {
-       SimpleRemoteControl remote=new SimpleRemoteControl();
-       Netflix netflix= new Netflix();
-       Spotify spotify= new Spotify();
- 
-       
-        remote.setCommand(new SpotifyOpen(spotify));
-        remote.buttonClicked();
+       SimpleRemoteControl remote=new SimpleRemoteControl();  //creates object for SimpleRemoteControl class
+       Netflix netflix= new Netflix();  //creates object for Netflix class
+       Spotify spotify= new Spotify();  //creates object for Spotify class
+    
+        remote.setCommand(new SpotifyOpen(spotify));   //sets command 
+        remote.buttonClicked();     //calls buttonClicked() method
         
-        remote.setCommand(new SpotifyClose(spotify));
-        remote.buttonClicked();
+        remote.setCommand(new SpotifyClose(spotify));  //sets command 
+        remote.buttonClicked();     //calls buttonClicked() method
         
-        remote.setCommand(new NetflixPlay(netflix));
-        remote.buttonClicked();
+        remote.setCommand(new NetflixPlay(netflix));   //sets command 
+        remote.buttonClicked();     //calls buttonClicked() method
         
-        remote.setCommand(new NetflixExit(netflix));
-        remote.buttonClicked();
+        remote.setCommand(new NetflixExit(netflix));   //sets command 
+        remote.buttonClicked();     //calls buttonClicked() method
      }
-  }
+    
+ }
