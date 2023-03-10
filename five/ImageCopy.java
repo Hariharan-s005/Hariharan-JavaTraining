@@ -12,11 +12,10 @@ public class ImageCopy {
 			
 		FileInputStream inputStream=new FileInputStream(file);  //input and output stream to read and write file in byte format
 		FileOutputStream outputStream=new FileOutputStream(copyPath);
-	
-			int i=0;			
+			
 			byte b[]=new byte[1024];
 			
-			while((i=inputStream.read(b))!=-1) 
+			while((inputStream.read(b)!=-1)) 
 			{
 				outputStream.write(b);
 	

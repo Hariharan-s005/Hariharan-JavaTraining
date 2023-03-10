@@ -14,8 +14,8 @@ public static void main(String[] args) throws IOException {
 		
 		fileOutputStream=new FileOutputStream("/Users/Hari/eclipse-workspace/Exercise7/src/nine/Date.txt");
 		
-			ObjectOutputStream objectOutputtream=new ObjectOutputStream(fileOutputStream);		
-			objectOutputtream.writeObject(date);
+			ObjectOutputStream objectOutputstream=new ObjectOutputStream(fileOutputStream);		
+			objectOutputstream.writeObject(date);
 			
 			BufferedReader bufferedreader=new BufferedReader(new FileReader("/Users/Hari/eclipse-workspace/Exercise7/src/nine/Date.txt"));	
 			String s;
@@ -23,7 +23,7 @@ public static void main(String[] args) throws IOException {
 			 {
 				 System.out.println(s);
 			 }
-			 objectOutputtream.close();
+			 objectOutputstream.close();
 			 bufferedreader.close();
 	}
 }

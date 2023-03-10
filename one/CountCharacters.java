@@ -10,7 +10,6 @@ public class CountCharacters {
 			{
 				String line=scan.nextLine();
 				count+=line.length();
-
 			}
 			System.out.println(count);
 		}
