@@ -1,0 +1,1 @@
+Example of file viewer printing contents on the console.
